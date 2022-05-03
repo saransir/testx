@@ -49,9 +49,9 @@ async def advantage_spoll_choker(bot, query):
             file_id = file.file_id
             sz = get_size(file.file_size)
             fn = file.file_name[0:23]
-            filename = f"{fn}{oam}{sz[0:3]} {sz[-2:]}{oam}"  
+            filename = f"{oam}{sz[0:3]} {sz[-2:]}{oam}{fn}"  
             btn.append(
-                [InlineKeyboardButton(text=f"{filename}",callback_data=f"saran#{file_id}")]
+                [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/On_air_Filter_bot?start=subinps_-_-_-_{file_id}")]
                 )
     else:
         await query.message.delete()
@@ -228,9 +228,9 @@ async def group(client, message):
                 file_id = file.file_id
                 sz = get_size(file.file_size)
                 fn = file.file_name[0:23].strip()
-                filename = f"{fn}{oam}{sz[0:3]} {sz[-2:]}{oamm}"
+                filename = f"{oam}{sz[0:3]} {sz[-2:]}{oamm}{fn}"
                 btn.append(
-                    [InlineKeyboardButton(text=f"{filename}",callback_data=f"saran#{file_id}")]
+                    [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/On_air_Filter_bot?start=subinps_-_-_-_{file_id}")]
                 )
         else:
             return await spell(message)
@@ -247,7 +247,7 @@ async def group(client, message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼",callback_data=f"myree#{sesna}"), InlineKeyboardButton("💡close💡", callback_data="close")]
+                [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼", url=f"https://telegram.dog/On_air_Filter_bot?start=saran=={sesna}"), InlineKeyboardButton("💡close💡", callback_data="close")]
             )
             poster=None
             if API_KEY:
@@ -265,7 +265,7 @@ async def group(client, message):
             [InlineKeyboardButton(text=f"🎪 Pages 1/{data['total']}🎪",callback_data="pages"),InlineKeyboardButton(text="⇏ɴᴇxᴛ⇏",callback_data=f"next_0_{keyword}")]
         )
         buttons.append(
-            [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼",callback_data=f"myree#{sesna}")]
+            [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼", url=f"https://telegram.dog/On_air_Filter_bot?start=saran=={sesna}")]
         )
         poster=None
         if API_KEY:
@@ -433,7 +433,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("⇍ʙᴀᴄᴋ⇍", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton(f"🎪 Pages {int(index)+2}/{data['total']}🎪", callback_data="pages")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼",callback_data=f"myree#")]
+                    [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼", url=f"https://telegram.dog/On_air_Filter_bot?start=saran==")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -447,7 +447,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("⇍ʙᴀᴄᴋ⇍", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton(f"🎪{int(index)+2}/{data['total']}🎪", callback_data="pages"),InlineKeyboardButton("⇏ɴᴇxᴛ⇏", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼",callback_data=f"myree#")]
+                    [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼", url=f"https://telegram.dog/On_air_Filter_bot?start=saran==")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -471,7 +471,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton(f"🎪 Pages {int(index)}/{data['total']}🎪", callback_data="pages"),InlineKeyboardButton("⇏ɴᴇxᴛ⇏", callback_data=f"next_{int(index)-1}_{keyword}")]                   
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼",callback_data=f"myree#")]
+                    [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼", url=f"https://telegram.dog/On_air_Filter_bot?start=saran==")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -485,7 +485,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     [InlineKeyboardButton("⇍ʙᴀᴄᴋ⇍", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton(f"🎪{int(index)}/{data['total']}🎪", callback_data="pages"),InlineKeyboardButton("⇏ɴᴇxᴛ⇏", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼",callback_data=f"myree#")]
+                    [InlineKeyboardButton(text="𝚂𝙴𝙰𝚁𝙲𝙷 𝙸𝙽 𝙿𝙼", url=f"https://telegram.dog/On_air_Filter_bot?start=saran==")]
                 )
 
                 await query.edit_message_reply_markup( 
