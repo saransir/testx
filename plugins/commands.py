@@ -137,10 +137,7 @@ async def start(bot, cmd):
                         InlineKeyboardButton("ɢʀᴏᴜᴩ 2 🎪", url="https://t.me/+cw1toKgivTRlNDI1")   
                     ],
                     [
-                        InlineKeyboardButton("🔎 𝚂𝙴𝙰𝚁𝙲𝙷 𝙵𝙸𝙻𝙴 🔍", switch_inline_query_current_chat='')
-                    ],
-                    [
-                        InlineKeyboardButton('🔍 ɢᴏ ɪɴʟɪɴᴇ 🔎', switch_inline_query='')
+                        InlineKeyboardButton("🔎 𝚂𝙴𝙰𝚁𝙲𝙷 𝙵𝙸𝙻𝙴 🔍",  url=f"https://telegram.dog/On_air_Filter_bot?start=saran==")
                     ]
                 ]
             )
@@ -232,7 +229,7 @@ async def bot_indo(bot, message):
         ]
         ] 
     await message.reply(text=f"<b>click the 👇 button to read group rules </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
-@Client.on_message(filters.command(['search', 'help']) & filters.private)
+@Client.on_message(filters.command(['seh', 'hep']) & filters.private)
 async def bot_link(bot, message):
     buttons = [
         [
@@ -288,7 +285,7 @@ async def delfor(bot,message):
 async def helmo(bot, message):
     buttons = [
         [
-            InlineKeyboardButton(text="🔍 ꜱᴇᴀʀᴄʜ ʙᴏᴛ",callback_data=f"myree#"),
+            InlineKeyboardButton(text="🔍 ꜱᴇᴀʀᴄʜ ʙᴏᴛ", url=f"https://telegram.dog/On_air_Filter_bot?start=saran==")
             InlineKeyboardButton(' 🔍 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ', url='https://www.google.com/')
         ]
         ]
@@ -296,7 +293,7 @@ async def helmo(bot, message):
     await asyncio.sleep(15) # error 
     await mo.delete()
     await message.delete()
-@Client.on_message(filters.command('mlm_new') & filters.private)
+@Client.on_message(filters.command('ml_new') & filters.private)
 async def textx(bot, message):
     buttons = [
         [
